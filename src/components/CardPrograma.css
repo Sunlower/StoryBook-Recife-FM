@@ -1,0 +1,89 @@
+/* CardPrograma — matches Figma Card components (id=389:84830, 389:84845)
+   cornerRadius: 12px, image gradient: #FF6900 → #E7000B
+   Text color: #5B1100, fonts: Isidora 500/700/600 */
+
+.rfm-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: var(--rfm-radius-card);
+  background: var(--rfm-white);
+  border: 1.5px solid var(--rfm-border);
+  transition: box-shadow 0.2s, border-color 0.2s;
+  box-shadow: var(--rfm-shadow-card);
+  max-width: 360px;
+}
+.rfm-card:hover { box-shadow: 0 4px 20px rgba(91,17,0,0.12); }
+
+/* Selected state — warm yellow bg */
+.rfm-card--selected {
+  background: var(--rfm-bg-selected);
+  border-color: var(--rfm-orange);
+}
+
+/* Live state — slightly different border */
+.rfm-card--live { border-color: transparent; }
+
+/* Cover image — 80×80, radius 8, gradient fallback */
+.rfm-card__img-wrap {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: var(--rfm-radius-img);
+  overflow: hidden;
+}
+
+.rfm-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rfm-card__img-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--rfm-gradient-img);
+}
+
+/* Body */
+.rfm-card__body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.rfm-card__live-row { margin-bottom: 4px; }
+
+/* Time — Isidora 500 16px */
+.rfm-card__time {
+  margin: 0;
+  font-family: var(--rfm-font-display);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--rfm-dark);
+}
+
+/* Name — Isidora 700 16px */
+.rfm-card__name {
+  margin: 0;
+  font-family: var(--rfm-font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--rfm-dark);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Host — Isidora 600 14px */
+.rfm-card__host {
+  margin: 0;
+  font-family: var(--rfm-font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--rfm-dark);
+  opacity: 0.75;
+}

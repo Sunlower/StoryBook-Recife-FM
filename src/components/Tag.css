@@ -1,0 +1,20 @@
+/* Tag — matches Figma Tag component set (id=3:2977) */
+/* font: Chidori VF 700 12px, cornerRadius: 8px */
+.rfm-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: var(--rfm-radius-tag);
+  font-family: var(--rfm-font-tag);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--rfm-white);
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+/* Tipo=Ao Vivo: #FB1F1F */
+.rfm-tag--ao-vivo    { background: var(--rfm-red); }
+
+/* Tipo=Fora do Ar: #FA8800 */
+.rfm-tag--fora-do-ar { background: var(--rfm-amber); }

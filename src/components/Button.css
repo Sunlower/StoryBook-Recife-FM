@@ -1,0 +1,37 @@
+/* Button — matches Figma component (id=495:152945) */
+.rfm-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 2px solid transparent;
+  border-radius: var(--rfm-radius-pill);
+  font-family: var(--rfm-font-display);
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s, box-shadow 0.15s;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.rfm-btn:hover:not(:disabled)  { opacity: 0.88; }
+.rfm-btn:active:not(:disabled) { transform: scale(0.97); }
+.rfm-btn:disabled              { opacity: 0.45; cursor: not-allowed; }
+
+/* Filled — orange #F08036 */
+.rfm-btn--filled {
+  background: var(--rfm-orange);
+  color: var(--rfm-white);
+  border-color: var(--rfm-orange);
+}
+
+/* Outlined */
+.rfm-btn--outlined {
+  background: transparent;
+  color: var(--rfm-orange);
+  border-color: var(--rfm-orange);
+}
+
+/* Sizes */
+.rfm-btn--sm { font-size: 13px; padding: 6px  16px; }
+.rfm-btn--md { font-size: 16px; padding: 10px 24px; }
+.rfm-btn--lg { font-size: 18px; padding: 14px 32px; }

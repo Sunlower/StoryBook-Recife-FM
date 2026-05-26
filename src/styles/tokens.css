@@ -1,0 +1,35 @@
+/* ─────────────────────────────────────────────────────
+   Recife FM 97.5 — Design Tokens (extracted from Figma)
+   ───────────────────────────────────────────────────── */
+:root {
+  /* Brand gradient (Player background, images) */
+  --rfm-gradient: linear-gradient(to right, #FB1F1F, #FA8800);
+  --rfm-gradient-img: linear-gradient(to right, #FF6900, #E7000B);
+
+  /* Solid brand colors */
+  --rfm-orange: #F08036;       /* Button filled */
+  --rfm-red: #FB1F1F;          /* "Ao Vivo" tag */
+  --rfm-amber: #FA8800;        /* "Fora do Ar" tag, slider track */
+  --rfm-dark: #5B1100;         /* Primary dark text */
+
+  /* Neutral */
+  --rfm-white: #ffffff;
+  --rfm-bg: #ffffff;
+  --rfm-bg-selected: #FFF8E7;  /* Card selected state (warm yellow) */
+  --rfm-border: #e5e4e7;
+  --rfm-text-secondary: #7B5C55;
+
+  /* Radius */
+  --rfm-radius-pill: 9999px;
+  --rfm-radius-card: 12px;
+  --rfm-radius-tag: 8px;
+  --rfm-radius-img: 8px;
+
+  /* Typography — commercial fonts used in Figma; fall back to system */
+  --rfm-font-display: 'Isidora', 'Isidora Sans', system-ui, sans-serif;
+  --rfm-font-tag: 'Chidori VF', 'Chidori', system-ui, sans-serif;
+  --rfm-font-body: 'Inter', system-ui, sans-serif;
+
+  /* Shadows */
+  --rfm-shadow-card: 0 2px 12px rgba(91, 17, 0, 0.08);
+}

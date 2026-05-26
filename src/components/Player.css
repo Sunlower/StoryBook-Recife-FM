@@ -1,0 +1,142 @@
+/* Player — matches Figma Player component set (id=3:2194)
+   Background gradient: #FB1F1F → #FA8800 (opacity 0.8), cornerRadius: 12px */
+
+.rfm-player {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 20px;
+  border-radius: var(--rfm-radius-card);
+  background: linear-gradient(to right, rgba(251,31,31,0.8), rgba(250,136,0,0.8));
+  color: var(--rfm-white);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Desktop */
+.rfm-player--desktop { min-height: 64px; }
+
+/* Mobile — narrower, stacked slightly */
+.rfm-player--mobile {
+  min-height: 56px;
+  padding: 10px 16px;
+}
+
+/* Info area */
+.rfm-player__info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Track info (Versão 1) */
+.rfm-player__track {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.rfm-player__cover {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.rfm-player__track-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.rfm-player__track-title {
+  font-family: var(--rfm-font-display);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--rfm-white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rfm-player__track-artist {
+  font-family: var(--rfm-font-display);
+  font-weight: 500;
+  font-size: 12px;
+  color: rgba(255,255,255,0.8);
+}
+
+/* Controls */
+.rfm-player__controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* Play button — white circle, dark icon (#5B1100) */
+.rfm-player__play-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--rfm-white);
+  color: var(--rfm-dark);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.15s, transform 0.1s;
+  flex-shrink: 0;
+}
+.rfm-player__play-btn svg { width: 22px; height: 22px; }
+.rfm-player__play-btn:hover:not(:disabled)  { opacity: 0.9; }
+.rfm-player__play-btn:active:not(:disabled) { transform: scale(0.94); }
+.rfm-player__play-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Volume — slider track #FA8800, handle white */
+.rfm-player__volume {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.rfm-player__volume svg { width: 18px; height: 18px; opacity: 0.9; }
+.rfm-player__vol-slider {
+  width: 80px;
+  accent-color: var(--rfm-white);
+  cursor: pointer;
+}
+
+/* Loading spinner */
+.rfm-player__spinner {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rfm-white);
+}
+.rfm-spinner {
+  width: 28px;
+  height: 28px;
+  animation: rfm-spin 1s linear infinite;
+}
+@keyframes rfm-spin { to { transform: rotate(360deg); } }
+
+/* Skeleton logo placeholder */
+.rfm-player__skeleton-logo {
+  width: 72px;
+  height: 32px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.25);
+  animation: rfm-shimmer 1.5s ease-in-out infinite;
+}
+@keyframes rfm-shimmer {
+  0%, 100% { opacity: 0.5; }
+  50%       { opacity: 1; }
+}

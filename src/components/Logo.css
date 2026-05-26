@@ -1,0 +1,51 @@
+/* Logo — matches Figma Logo Recife FM (id=9:1475) */
+.rfm-logo {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 4px;
+  font-family: var(--rfm-font-display);
+  font-style: italic;
+  line-height: 1;
+}
+
+.rfm-logo__arcs {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 2px;
+}
+.rfm-logo__arc-svg {
+  width: 1em;
+  height: 0.7em;
+}
+
+.rfm-logo__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.rfm-logo__name {
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  display: block;
+}
+
+.rfm-logo__freq {
+  font-weight: 700;
+  display: block;
+}
+
+/* Sizes */
+.rfm-logo--sm .rfm-logo__name { font-size: 18px; }
+.rfm-logo--sm .rfm-logo__freq { font-size: 14px; }
+
+.rfm-logo--md .rfm-logo__name { font-size: 28px; }
+.rfm-logo--md .rfm-logo__freq { font-size: 20px; }
+
+.rfm-logo--lg .rfm-logo__name { font-size: 48px; }
+.rfm-logo--lg .rfm-logo__freq { font-size: 32px; }
+
+/* Color variants */
+.rfm-logo--colorida { color: var(--rfm-orange); }
+.rfm-logo--preta    { color: #111111; }
+.rfm-logo--cinza    { color: #888888; }
+.rfm-logo--branca   { color: var(--rfm-white); }
